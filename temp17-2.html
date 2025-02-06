@@ -6,21 +6,43 @@
     <title>Document</title>
     <style>
         #con{
+            display: flex;
             text-align: center;
         }
+        #box{
+            border: 3px solid black;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 20px; 
+        }
+        button{
+            background-color: gray;
+        }
+        input{
+            width: 60%;
+            padding: 5px;
+            border-radius: 5px;
+            border-color: black;
+        }
+
     </style>
     <script>
         function signup(){
+            let arr=[]
             let Name=document.getElementById("name").value
             let Email=document.getElementById("email").value
             let Password=document.getElementById("password").value
             let DOB=document.getElementById("date").value
-            data.innerHTML=`${Name} , ${Email} , ${Password} , ${DOB}`
+            arr.push({Name,Email,Password,DOB});
+            for(let i=0;i<arr.length;i++){
+                data.innerHTML+=`<p>${arr[i].Name} , ${arr[i].Email} , ${arr[i].Password} , ${arr[i].DOB}</p>`
+            }
         }
     </script>
 </head>
 <body>
     <div id="con">
+        <div id="box">
     <h1>New User Signup Form</h1>
     <p><input type="text" id="name" placeholder="Name"></p>
     <p><input type="text" id="email" placeholder="Email Address"></p>
