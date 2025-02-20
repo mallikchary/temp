@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documents</title>
+    <style>
+        .c{
+            background-color: blanchedalmond;
+        }
+    </style>
     <script>
         function showdata(){
-            let Email=document.getElementById("mail").value
+            //let Email=document.getElementById("mail").value
+            //let Email=document.querySelector("#mail").value
+            //let Email=document.querySelector(".c").value
+            let Email=document.querySelectorAll("input")
+            console.log(Email[0].value)
             let Password=document.getElementById("password").value
             data.innerHTML=`${Email},${Password}`    
         }
@@ -14,7 +23,7 @@
 </head>
 <body>
     <h1>Login form</h1>
-    <p><input type="text" id="mail" placeholder="Email the Address"></p>
+    <p><input type="text" class="c" id="mail" placeholder="Email the Address"></p>
     <p><input type="password" id="password" placeholder="Password"></p>
     <button onclick="showdata()">Log In</button>
     <div id="data"></div>
