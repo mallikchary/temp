@@ -1,4 +1,4 @@
-let a=100
-        let b=2000
-        let c=a+b
-        document.write(c)
+let a=10
+let b=20
+let c=a+b
+document.write(c)
